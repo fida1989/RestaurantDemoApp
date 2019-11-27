@@ -2,10 +2,12 @@ package com.hungrydroid.restaurantapp;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.hungrydroid.restaurantapp.adapters.MenuListAdapter;
 import com.loopj.android.http.AsyncHttpClient;
@@ -69,6 +71,7 @@ public class MenuListActivity extends AppCompatActivity {
 
                         prgmNameList[i] = c.getString("name");
                         prgmImages[i] = c.getString("image");
+                        System.out.println(prgmImages[i]);
                         prgmIds[i] = c.getString("id");
                         prgmDesc[i] = c.getString("description");
                     }
